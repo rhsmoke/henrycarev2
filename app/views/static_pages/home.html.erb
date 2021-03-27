@@ -22,9 +22,13 @@ his care and available to help with any questions or concerns.
 </p>
 <hr>
 <% if @current_jobs %>
-  <% @current_jobs.each do |app| %>
-    <%= link_to app.name, app.url %>
-  <% end %>
+  <ul>
+    <% @current_jobs.each do |app| %>
+      <li>
+        <%= button_to app.name, app.url %>
+      </li>
+    <% end %>
+  </ul>
 <% else %>
   <p>We are currently not accepting applications</p>
 <% end%>
