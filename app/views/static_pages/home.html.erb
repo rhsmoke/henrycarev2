@@ -1,1 +1,33 @@
-<h1 class="text-5xl font-bold text-center my-20">Your App Works!</h1>
+<h1 class="text-3xl font-bold text-center my-20">We are seeking dependable, kind, morning and bedtime caregivers.</h1>
+<ul class='list-disc'>
+    <li>Flexible part-time schedule.</li>
+    <li>Pleasant home environment with appreciative people.</li>
+    <li>Pay starting at $16/hr; $24/hr for holidays and back-up fill-in</li>
+    <ul class='list-none'>
+        <li>4hr. AM shift 8:00AM - Noon</li>
+        <li>2hr. PM shift 8:00PM - 10:00PM</li>
+    </ul>
+    <li>We need to fill a 7-day schedule; holidays pay time-and-a-half</li>
+</ul>
+<p>Henry is a pleasant man with limited mobility. He uses a power wheelchair and needs 
+help getting in/out of bed in the morning and at night, with bathing, dressing, 
+changing his colostomy bag/condom catheter.
+</p>
+
+<p>He also needs help with daily exercises. Other duties include prepping light 
+breakfast in the morning and light clean-up detail.</p>
+
+<p>Henry lives with his wife, Therese, in White Lake. Family is active in 
+his care and available to help with any questions or concerns.
+</p>
+<hr>
+<% if @current_jobs %>
+  <% @current_jobs.each do |app| %>
+    <%= link_to app.name, app.url %>
+  <% end %>
+<% else %>
+  <p>We are currently not accepting applications</p>
+<% end%>
+
+
+

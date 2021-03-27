@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    @current_jobs = Jobposting.all
   end
 
   def about
